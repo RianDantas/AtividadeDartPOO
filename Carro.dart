@@ -3,11 +3,12 @@ class Carro{
     String _modelo;
     int _ano;
 
-    Carro(this._marca, this._modelo, this.ano)
+
+    Carro(this._marca, this._modelo, this._ano);
 
     String get marca => _marca;
     String get modelo => _modelo;
-    String get ano => _ano;
+    int get ano => _ano;
 
     set marca(String marca){
         _marca = marca;
@@ -20,19 +21,14 @@ class Carro{
     }
 
     void idadeDoCarro(){
-        var idade = 2025 - _ano;
+        var idade =  2025 - _ano;
         print("Seu carro tem $idade anos!");
     }
 
     void informacoes(){
         print("Marca: $_marca");
-        print("Modelo: $_Modelo");
+        print("Modelo: $_modelo");
         print("Ano: $_ano");
     }
 }
 
-void main(){
-    var carro = Carro("Chevrolet", "Classic Life", 2009);
-    carro.informacoes();
-
-}
